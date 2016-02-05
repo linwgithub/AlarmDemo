@@ -1,4 +1,4 @@
-package com.pollysoft.alarmdemo;
+package com.pollysoft.alarmdemo.activity;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
+import com.pollysoft.alarmdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
         long curTime = System.currentTimeMillis();
         curTime += 5000;
-        Intent i = new Intent("com.pollysoft.alarmdemo.MyService");
+        Intent i = new Intent("com.pollysoft.alarmdemo.service.MyService");
         PendingIntent sender = PendingIntent.getService(this, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
         am.set(AlarmManager.RTC_WAKEUP, curTime, sender);
     }

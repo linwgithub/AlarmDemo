@@ -1,4 +1,4 @@
-package com.pollysoft.alarmdemo;
+package com.pollysoft.alarmdemo.service;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -10,6 +10,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
+
+import com.pollysoft.alarmdemo.R;
+import com.pollysoft.alarmdemo.activity.ResultActivity;
 
 public class MyAlarmService extends Service {
     public MyAlarmService() {
