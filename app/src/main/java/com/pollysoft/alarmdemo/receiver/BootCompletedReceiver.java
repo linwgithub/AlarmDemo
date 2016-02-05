@@ -15,8 +15,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
         Log.e(LOG_TAG, "》》》》》》》》》监听到开机，服务启动");
-        intent.setAction("com.pollysoft.alarmdemo.service.MyService");
-        //启动不死进程
+
+        intent.setAction("com.pollysoft.alarmdemo.MyService");
         context.startService(intent);
         throw new UnsupportedOperationException("Not yet implemented");
     }
