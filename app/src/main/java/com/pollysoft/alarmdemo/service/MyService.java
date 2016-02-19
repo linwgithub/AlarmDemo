@@ -1,15 +1,12 @@
 package com.pollysoft.alarmdemo.service;
 
 import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.view.View;
 
-import com.pollysoft.alarmdemo.R;
 import com.pollysoft.alarmdemo.activity.ResultActivity;
 import com.pollysoft.alarmdemo.receiver.MyServiceReceiver;
 
@@ -49,7 +46,7 @@ public class MyService extends Service {
                 //耗时的操作
             }
         }).run();
-//        if ()
+        //if ()
         //判断是否开启服务
 
         return Service.START_STICKY;

@@ -27,4 +27,17 @@
         android:text="设置闹钟"
         android:onClick="setAlarms"/>
 
+    <EditText
+        android:id="@+id/et_main_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="时"
+        android:numeric="integer"/>
+
+    <EditText
+        android:id="@+id/et_main_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="分"
+        android:numeric="integer"/>
 </LinearLayout>

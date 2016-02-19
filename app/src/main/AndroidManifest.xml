@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pollysoft.alarmdemo" >
+    package="com.pollysoft.alarmdemo">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".activity.MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +21,7 @@
         <service
             android:name=".service.MyService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.pollysoft.alarmdemo.MyService" />
             </intent-filter>
@@ -37,7 +39,7 @@
         <receiver
             android:name=".receiver.BootCompletedReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
@@ -50,7 +52,7 @@
         <service
             android:name=".service.MyAlarmService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.pollysoft.alarmdemo.MyAlarmService" />
             </intent-filter>
@@ -59,7 +61,7 @@
         <receiver
             android:name=".receiver.MyServiceReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.pollysoft.alarmdemo.receiver.MyServiceReceiver" />
             </intent-filter>
@@ -67,11 +69,18 @@
         <receiver
             android:name=".receiver.MyReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.dwtedx.MyReceiver" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".activity.MyAlarmActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
